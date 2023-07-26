@@ -24,6 +24,8 @@ namespace AspNetCoreHero.Boilerplate.Infrastructure.DbContexts
 
         public DbSet<Product> Products { get; set; }
 
+        public DbSet<Driver> Vendor { get; set; }
+
         public IDbConnection Connection => Database.GetDbConnection();
 
         public bool HasChanges => ChangeTracker.HasChanges();

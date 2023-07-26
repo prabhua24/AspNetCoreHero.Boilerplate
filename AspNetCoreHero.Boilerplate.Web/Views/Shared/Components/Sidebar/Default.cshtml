@@ -2,9 +2,9 @@
 @inject IHtmlLocalizer<SharedResource> localizer
 <aside id="sideBar" class="main-sidebar sidebar-dark-primary">
     <a href="/" class="brand-link">
-        <img src="~/images/logo-transparent.png" id="brand-logo" alt="logo" class="brand-image img-circle"
+        <img src="./images/images.png" id="brand-logo" alt="logo" class="brand-image img-circle"
              style="opacity: .8">
-        <span class="brand-text font-weight-light" style="font-size:0.8em!important">ASP.NET Core Hero</span>
+        <span class="brand-text font-weight-light" style="font-size:0.8em!important">TRUCKRR</span>
     </a>
     <div class="sidebar">
         <nav class="mt-2">
@@ -18,28 +18,40 @@
                         </p>
                     </a>
                 </li>
-                @if (User.IsInRole("SuperAdmin"))
+               @* @if (User.IsInRole("SuperAdmin"))
                 {
-                    <li class="nav-header">@localizer["Admin"]</li>
-                    <li is-active-route asp-area="Admin" class="nav-item has-treeview">
-                        <a is-active-route asp-area="Admin" class="nav-link">
+                    <li  class="nav-header">@localizer["Admin"]</li>
+                    <li is-active-route asp-area="Admin" class="nav-item has-treeview"  >
+                        <a is-active-route asp-area="Admin" class="nav-link" style="background-color:red">
                             <i class="nav-icon fas fa-user"></i>
-                            <p>
+                            <p >
                                 @localizer["Admin Settings"]
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a is-active-route asp-area="Admin" asp-controller="User" class="nav-link">
+                                <a is-active-route asp-area="Admin" asp-controller="User" class="nav-link" >
                                     <i class="far fa-user-circle nav-icon"></i>
                                     <p>@localizer["Users"]</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a is-active-route asp-area="Admin" asp-controller="Role" class="nav-link">
+                                <a is-active-route asp-area="Admin" asp-controller="Role" class="nav-link" >
                                     <i class="far fa-user-circle nav-icon"></i>
                                     <p>@localizer["Roles"]</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a is-active-route asp-area="Admin" asp-controller="Role" class="nav-link" >
+                                    <i class="far fa-user-circle nav-icon"></i>
+                                    <p>@localizer["driverlist"]</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a is-active-route asp-area="Admin" asp-controller="Role" class="nav-link">
+                                    <i class="far fa-user-circle nav-icon"></i>
+                                    <p>@localizer["Vendor list "]</p>
                                 </a>
                             </li>
                         </ul>
@@ -58,7 +70,19 @@
                         <li class="nav-item">
                             <a is-active-route class="nav-link">
                                 <i class="far fa-file-archive nav-icon"></i>
-                                <p>@localizer["Document"]</p>
+                                <p>@localizer["Document1"]</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a is-active-route class="nav-link">
+                                <i class="far fa-file-archive nav-icon"></i>
+                                <p>@localizer["Document2"]</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a is-active-route class="nav-link">
+                                <i class="far fa-file-archive nav-icon"></i>
+                                <p>@localizer["Document3"]</p>
                             </a>
                         </li>
                     </ul>
@@ -70,22 +94,35 @@
                             @localizer["Catalog"]
                             <i class="right fas fa-angle-left"></i>
                         </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                    </a>*@
+                   @* <ul class="nav nav-treeview">*@
+                        @*<li class="nav-item">
                             <a is-active-route asp-area="Catalog" asp-controller="Product" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>@localizer["Product"]</p>
+                                <p>@localizer["PRODUCT"]</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a is-active-route asp-area="Catalog" asp-controller="Brand" class="nav-link">
+                            <a is-active-route asp-area="Catalog" asp-controller="Brand" class="nav-link" >
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>@localizer["Brand"]</p>
                             </a>
+                        </li>*@
+                        <li class="nav-item">
+                            <a is-active-route asp-area="Catalog" asp-controller="Vendor" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>@localizer["Vehicle"]</p>
+                            </a>
                         </li>
-                    </ul>
-                </li>
+                       <li class="nav-item">
+                            <a is-active-route asp-area="Catalog" asp-controller="Driver" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>@localizer["Driver"]</p>
+                            </a>
+                        </li>
+                       
+               @*     </ul>*@
+               @* </li>*@
             </ul>
         </nav>
     </div>

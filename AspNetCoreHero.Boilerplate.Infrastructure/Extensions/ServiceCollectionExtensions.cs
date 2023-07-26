@@ -26,6 +26,8 @@ namespace AspNetCoreHero.Boilerplate.Infrastructure.Extensions
             services.AddTransient(typeof(IRepositoryAsync<>), typeof(RepositoryAsync<>));
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IProductCacheRepository, ProductCacheRepository>();
+            services.AddTransient<IDriverRepository, VendorRepository>();
+            services.AddTransient<IDriverrCacheRepository, DriverCacheRepository>();
             services.AddTransient<IBrandRepository, BrandRepository>();
             services.AddTransient<IBrandCacheRepository, BrandCacheRepository>();
             services.AddTransient<ILogRepository, LogRepository>();

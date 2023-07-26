@@ -1,0 +1,68 @@
+﻿@using AspNetCoreHero.Boilerplate.Web.Areas.Catalog.Models
+@model IEnumerable<DriverViewModel>
+<table id="DriverTable" class="table table-striped" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>UseriD</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Mobile number</th>
+            <th>Preferred Location</th>
+            <th>Expertise</th>
+            <th>Rating</th>
+            <th>Status</th>
+            <th>More</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var driver in Model)
+        {
+            <tr>
+                <td>
+                    @driver.UserID
+                </td>
+                <td>@driver.Name</td>
+                
+                    @if (String.Equals(driver.Job, "NOT Assigned"))
+                    {
+                    <td style="background-color:#ff9a9a;">
+                        <span style="color:red;" >@driver.Job</span>
+                    </td>
+                    }
+                    else
+                    {
+                    <td style="background-color:#9aff9a;">
+                           <span style="color:green;">@driver.Job</span>
+                       </td>
+                    }
+                
+
+                <td>@driver.MobileNumber</td>
+                <td>@driver.PreferedLocation</td>
+                <td>@driver.Expertise</td>
+                <td>@driver.Rating</td>
+                @if (String.Equals(driver.ActiveStatus, "Inactive"))
+                {
+                    <td style="background-color:#ff9a9a;">
+                        <span style="color:red;">@driver.ActiveStatus</span>
+                    </td>
+                }
+                else
+                {
+                    <td style="background-color:#9aff9a;">
+                        <span style="color:green;">@driver.ActiveStatus</span>
+                    </td>
+                }
+               
+                <td>More</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $("#DriverTable").DataTable();
+    });
+</script>

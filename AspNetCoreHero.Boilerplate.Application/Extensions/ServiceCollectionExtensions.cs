@@ -15,5 +15,6 @@ namespace AspNetCoreHero.Boilerplate.Application.Extensions
             services.AddMediatR(Assembly.GetExecutingAssembly());
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         }
+
     }
 }

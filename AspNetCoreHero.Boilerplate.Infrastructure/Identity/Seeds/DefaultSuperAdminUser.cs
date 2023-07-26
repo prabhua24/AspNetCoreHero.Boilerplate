@@ -29,6 +29,8 @@ namespace AspNetCoreHero.Boilerplate.Infrastructure.Identity.Seeds
             await roleManager.AddPermissionClaim(adminRole, "Users");
             await roleManager.AddPermissionClaim(adminRole, "Products");
             await roleManager.AddPermissionClaim(adminRole, "Brands");
+            await roleManager.AddPermissionClaim(adminRole, "Vendors");
+            await roleManager.AddPermissionClaim(adminRole, "Drivers");
         }
 
         public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)

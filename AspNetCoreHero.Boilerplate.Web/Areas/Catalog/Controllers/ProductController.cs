@@ -55,7 +55,7 @@ namespace AspNetCoreHero.Boilerplate.Web.Areas.Catalog.Controllers
             }
             else
             {
-                var response = await _mediator.Send(new GetProductByIdQuery() { Id = id });
+                var response = await _mediator.Send(new GetVendorByIdQuery() { Id = id });
                 if (response.Succeeded)
                 {
                     var productViewModel = _mapper.Map<ProductViewModel>(response.Data);

@@ -21,7 +21,7 @@ namespace AspNetCoreHero.Boilerplate.Api.Controllers.v1
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var product = await _mediator.Send(new GetProductByIdQuery() { Id = id });
+            var product = await _mediator.Send(new GetVendorByIdQuery() { Id = id });
             return Ok(product);
         }
 

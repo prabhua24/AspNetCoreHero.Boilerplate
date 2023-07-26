@@ -1,0 +1,41 @@
+﻿@using AspNetCoreHero.Boilerplate.Web.Areas.Catalog.Models
+@model IEnumerable<VendorViewModel>
+<table id="DriverTable" class="table table-striped" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>UseriD</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Mobile number</th>
+            <th>Preferred Location</th>
+            <th>Expertise</th>
+            <th>Rating</th>
+            <th>Status</th>
+            <th>More</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @*@foreach (var driver in Model)
+        {
+            <tr>
+                <td>
+                    @driver.UserID
+                </td>
+                <td>@driver.Name</td>
+                <td>@driver.Job</td>
+                <td>@driver.MobileNumber</td>
+                <td>@driver.PreferedLocation</td>
+                <td>@driver.Expertise</td>
+                <td>@driver.Rating</td>
+                <td>@driver.ActiveStatus</td>
+            </tr>
+        }*@
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $("#DriverTable").DataTable();
+    });
+</script>

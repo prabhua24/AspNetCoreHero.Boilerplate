@@ -1,7 +1,7 @@
 ﻿@page
 @model AspNetCoreHero.Boilerplate.Web.Areas.Identity.Pages.ProfileModel
 <div class="d-sm-flex align-items-center justify-content-between">
-    <h1 class="h3 mb-0 text-gray-800">@Model.FirstName @Model.LastName's Profile</h1>
+    <h1 class="h3 mb-0 text-gray-800">@Model.FirstName @Model.LastName</h1>
 </div>
 <div id="userRoles" style="padding: 20px 20px 20px 0px">
     @foreach (var role in Model.Roles)
@@ -67,11 +67,11 @@
                                 <div class="col">
                                     @if (Model.ProfilePicture != null)
                                     {
-                                        <img id="viewableImage" alt="Profile Picture of @Model.Username" style="width:inherit; height:350px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model.ProfilePicture))">
+                                        <img id="viewableImage" alt="Profile Picture of @Model.Username" style="width:inherit; height:350px; object-fit:cover" src="./images/martin.jpg",@(Convert.ToBase64String(Model.ProfilePicture))">
                                     }
                                     else
                                     {
-                                        <img id="viewableImage" alt="Profile Picture of @Model.Username" style="width:inherit; height:350px; object-fit:cover" src="~/images/default-user.png">
+                                        <img id="viewableImage" alt="Profile Picture of @Model.Username" style="width:inherit; height:350px; object-fit:cover" src="~/images/martin.jpg">
                                     }
                                 </div>
                             </div>

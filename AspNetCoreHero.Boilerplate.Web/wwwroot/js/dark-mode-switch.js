@@ -15,7 +15,8 @@ window.addEventListener('load', () => {
  * Description: initTheme is a function that uses localStorage from JavaScript DOM,
  * to store the value of the HTML switch. If the switch was already switched to
  * 'on' it will set an HTML attribute to the body named: 'data-theme' to a 'dark'
- * value. If it is the first time opening the page, or if the switch was off the
+ * value. If it is the first time opening the page, or if the switch 
+ * was off the
  * 'data-theme' attribute will not be set.
  * @return {void}
  */
@@ -34,7 +35,7 @@ function initTheme() {
         $('.form-control').attr('style', 'background-color: #212121!important;color:white;border:1px solid #3c3c3c');
         $('.modal-content').attr('style', 'background-color: #212121!important;');
         $('.loader-section').attr('style', 'background: #212121!important;');
-        $("#brand-logo").attr("src", "/images/logo-transparent-light.png");
+        $("#brand-logo").attr("src", "/images/images.png");
         //.form-control
     }
     else {
@@ -47,7 +48,7 @@ function initTheme() {
         $('.form-control').attr('style', 'background-color: #ffffff!important;color:black;border:1px solid #ced4da');
         $('.modal-content').attr('style', 'background-color: #ffffff!important;');
         $('.loader-section').attr('style', 'background: #ffffff!important;');
-        $("#brand-logo").attr("src", "/images/logo-transparent-dark.png");
+        $("#brand-logo").attr("src", "/images/images.png");
     }
 }
 
@@ -68,7 +69,7 @@ function resetTheme() {
         $('.form-control').attr('style', 'background-color: #212121!important;color:white;border:1px solid #3c3c3c');
         $('.modal-content').attr('style', 'background-color: #212121!important;');
         $('.loader-section').attr('style', 'background: #212121!important;');
-        $("#brand-logo").attr("src", "/images/logo-transparent-light.png");
+        $("#brand-logo").attr("src", "/images/images.png");
         localStorage.setItem('darkSwitch', 'dark');
     } else {
         document.body.removeAttribute('data-theme');
@@ -80,7 +81,7 @@ function resetTheme() {
         $('.form-control').attr('style', 'background-color: #ffffff!important;color:black;border:1px solid #ced4da');
         $('.modal-content').attr('style', 'background-color: #ffffff!important;');
         $('.loader-section').attr('style', 'background: #ffffff!important;');
-        $("#brand-logo").attr("src", "/images/logo-transparent-dark.png");
+        $("#brand-logo").attr("src", "/images/images.png");
         localStorage.removeItem('darkSwitch');
     }
 }

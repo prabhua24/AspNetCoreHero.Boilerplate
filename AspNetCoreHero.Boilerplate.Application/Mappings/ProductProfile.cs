@@ -2,6 +2,7 @@
 using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllCached;
 using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetAllPaged;
 using AspNetCoreHero.Boilerplate.Application.Features.Products.Queries.GetById;
+using AspNetCoreHero.Boilerplate.Application.Features.Vendors.Queries.GetById;
 using AspNetCoreHero.Boilerplate.Domain.Entities.Catalog;
 using AutoMapper;
 
@@ -12,7 +13,7 @@ namespace AspNetCoreHero.Boilerplate.Application.Mappings
         public ProductProfile()
         {
             CreateMap<CreateProductCommand, Product>().ReverseMap();
-            CreateMap<GetProductByIdResponse, Product>().ReverseMap();
+            CreateMap<GetDriverByIdResponse, Product>().ReverseMap();
             CreateMap<GetAllProductsCachedResponse, Product>().ReverseMap();
             CreateMap<GetAllProductsResponse, Product>().ReverseMap();
         }
